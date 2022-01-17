@@ -26,7 +26,7 @@ pipeline {
     stage('Push Image') {
       steps{
         script {
-          docker.withRegistry( "192.168.1.96:5000", 'dockerhub' ) {
+          docker.withRegistry( "http://192.168.1.96:5000", 'dockerhub' ) {
             dockerImage.push()
           }
         }
