@@ -26,7 +26,7 @@ pipeline {
     stage('Push Image') {
       steps{
         script {
-          docker.withRegistry( "192.168.1.96:5000", credentials('docker-registry-id') ) {
+          docker.withRegistry( "192.168.1.96:5000", 'docker-registry-id' ) {
             dockerImage.push()
           }
         }
