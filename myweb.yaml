@@ -21,7 +21,6 @@ spec:
         name: myweb
 
 ---
-apiVersion: v1
 kind: Service
 metadata:
   labels:
